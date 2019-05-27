@@ -1,0 +1,10 @@
+others:
+  data:
+    students:
+      list:
+        -
+          name: Ravi
+          rollNumber: 10
+        -
+          name: Bhushan
+          rollNumber: 11

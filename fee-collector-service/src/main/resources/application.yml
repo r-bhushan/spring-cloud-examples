@@ -1,0 +1,6 @@
+others:
+  url:
+    student-service-default-url: http://localhost:8082/student/pendingFee/list
+    student-service-loadBalanced-url: http://student-service/student/pendingFee/list
+    feign:
+      student-service: student-service

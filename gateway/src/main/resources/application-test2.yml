@@ -1,0 +1,9 @@
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+
+zuul:
+  routes:
+    users:
+      path: /student-zuul-server/**
+      serviceId: student-service
