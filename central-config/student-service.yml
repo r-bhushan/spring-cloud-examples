@@ -1,0 +1,19 @@
+
+others:
+  data:
+    students:
+      list:
+        -
+          name: Ravi
+          rollNumber: 10
+        -
+          name: Bhushan
+          rollNumber: 11
+        -
+          name: Mew Name test
+          rollNumber: 12
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
