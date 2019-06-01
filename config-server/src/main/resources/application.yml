@@ -1,0 +1,65 @@
+spring:
+    cloud:
+      config:
+        server:
+          git:
+#            uri: https://github.com/r-bhushan/spring-cloud-config
+            uri: https://github.com/r-bhushan/spring-cloud-config
+            ignoreLocalSshSettings: true
+#            hostKey: someHostKey
+            searchPaths: central-config
+            hostKeyAlgorithm: ssh-rsa
+            privateKey: |
+                        -----BEGIN RSA PRIVATE KEY-----
+                        MIIJKQIBAAKCAgEAuETWcqRs/LEOEPxyWUlh/e9OhNPalRq7WSa+vSyLHVZ3qgHj
+                        duUrBWONBlPlx3txqJ/59DRdNdG1DaxYyCCVA3N4yTyAL/bKEF4IgKCppQkdYnmV
+                        gMH5o90Je1NFW3j7n8LaxzZQcZAkk5bw7g7ERSQH0IcCbsw7LPxp8TrQi6JNDMCp
+                        U1fy0KfMJVV30EofQG8Sb+esiyhfZQNMowpzHdz1+GE6219u8bQUiU1ra6uCJjA5
+                        SS6XLN/2XRD41N5JHzkXPD4l/fevSDb13UXThdDctFnuQnAD8A3u6InRj+MC0S2G
+                        z0vo4TPXT1cb+iIWO/8NQCQElha6z44XHFsovxvxHU7g3VvL5Boxd7zeHTQXSo50
+                        UnP/1nvzuF0xIZxykQbKL9n9nRzjQ4LWnnl/ycMZysGdQDppy+6pBPSucDD9Eg1V
+                        WkRAFO9PNkRhOG5gJxHXO4M3fqo881a2aEhKSTnY1AHsDbNCv56J6JPq4oPBMeBz
+                        xkwek7ux/W8EMMqcmeveoXDqG5rVV4sTizg9HScftFXzzH7MzAaAINVm63ws+gSU
+                        3LnIx9cjeinW+I76CpF6FnxzOIKhkfkK1jsIRAKrlXTCUM1VMwtQsa8c5Nnz9COs
+                        3J8EwOTu3LzryCoMtQLdeYG9wWJX9B13CSlCmLk8otfvv/nSoqmqKgoCsacCAwEA
+                        AQKCAgEAsaFqOElY5p6nOKiicn/S/r9ZqaGv7FxAjchTxnjSAg4AfNolM8/mkONO
+                        ZvMpZgsRncPZaBeyYtcs+WlSjFkcTJ9bqGGyEIqObwi2mYhHANiwguVBwUU8KUJC
+                        iafUDEGsDm4ACFnLYi3ZlIzE5DdH7H63KcV8CuLFiLAqUGip8HEcZVaz46u8Xnfi
+                        y3qAbUGGrs5jr4xdQChDDVUI44KHRhpi4nSYEDEG+ejmgxUmoDxM0hNapblL8e5T
+                        x5M8y7ccNgUK6P/gD9pcFfklOZC+PxkAKLsoetMQeLB1xaRVZ6cmaA7DDcHXVIBs
+                        5gbK6W1CkcNkOph981El9D68+JDHzQ8lnaaN7wJ8g/yA4VaauAXUopRjofem6zAh
+                        +2TT77Gg6KPS/pLeZ9fhGO+47ay5I8XJ5yhOYp9tbhBs88ZOXVl7PdKdvqwO/fYc
+                        rq0M1VyDz7ZkfKVEHGIiHNyyXBtUBrzwDI/tbpi7Pl9G71gIuRtXLhbQn+msyXo8
+                        fBcJZBP6K0W2BOGHlNyQuPKmhOZ3PgRUZmSAF9JDlp4sKqcz8pUF1lhj5tjxTgaY
+                        WnnuA1y0R+cbtguOI18XMSptrf3Br+zoMGe3CMzOITogBx5MDopa8XdZ4HeXWUaM
+                        y+cSoHram6OY3anLVaypPW5Zw0qB/cp3k1iQ6xdW3xjn+fThg0ECggEBAOOl0+sG
+                        +wMn9VNma8tSqyQcxC4/b32cqnOwx5prrIst3ySwUsdoCeFF4A5qOMNPN7DJ1/Vt
+                        QDqcw+cUxONEuAVEfHaTDE6v4G9cUX03aTeYfpJTChAi0OOtFz16Ye0max/AaIDp
+                        d/PjvOa8kYjFJuvRTo76Mzk0NK+IlCR3sb0jmSeDDP3VINKT+PRCZ6gjEUq4iipq
+                        1/B4QTw0b6LvePtzMKQKlxWdpJd2bM91DXK8VaI1yADfUP+BZhAWcdk6TsAW2rkL
+                        hpz2brHQXGjv7EC5ABi+jhs6rXSqgJ9+fAZtkmY172Oj126fKF4SswCaPMBWbvL1
+                        DTlbGsygWzXs/NsCggEBAM838kzR+/RLV5w1nH6kHujdSGO/UL8tULM9/615zypK
+                        x7adVrYTzCHfIKvyY4yaYP738pgaTQghx9HJVTkuL7G7aE99vI9cXIwHnxLX+mu+
+                        wjqD45u6pionetntLrmaklawOXOdF5YpRCiPhpJT26uUsS08zA3neS4L0i33hp3V
+                        lw3wn9y+mAWp5KdaGqkL3J1GzRib/8uV08Es09ZweGYb/2RCTv2CmpwjDAwPZQ2v
+                        5P7xMzC1hofZJN5sduDhxkK1zlidyz4/yLFIT5NQ700buEnGTezjIYxyDvIn3Hi0
+                        aDgkcEUo/Xeh7uPEetaF5fzEf1yMuUREm/7ad4qMUiUCggEBAL46F/fRgXeFsG7c
+                        qz7f+brXfufWgmfIvnamRmU3jJtQ3aJe5Q1UVs00AqKJCJ3MWJEWWavwezd/QASd
+                        SllPVyavsAG1pxcpyLXFwyKLZxTaDQpg8YvCTCO0xDLPTX1KGUITGkB+14mpyHRX
+                        JpXPiVKNOMQpNxyaD1yPGJvQmWmfkZ9+1yBVNHRCyknyI4RQqWZzBqGjXobHNlwE
+                        xTS2P7Z+7ypk3xNlA+C9SPeirHYwAq7lmheAhMK9cngHCWOoYZ4KewMeKoKHOsDD
+                        iDT4J8d90CLdOQpv4foXcBvXKfSFI0zdzQjKJH9/58+UeJgMSq++ij/jngVLp/1O
+                        EmnhevkCggEAdze/3nSdGYLTR9sMS0wPQHg3MrQaN7NRj54m4F6JUtKtLiI9hgnD
+                        0uT1fhe5MGaNUYPDfcD7+qa8uLS1pG0vIXkp3ToA5xYDZMjpu0SpHZ4lTtccdzce
+                        bHhEVOcBj+UfNmKy2xJRRKI/RXq1uLAoXQHyIY2t9H3tGRHR/YJAX8RH4MxEnRLG
+                        kdOZ6rKLTiC174KRcwwlUbLEnoo04lXY3x5ShBMmMPIYE6aSQsoEoKhG/mo0wlxd
+                        pwDGFnWeu2kJ0M2ahx9ZlFnMFDr/FUlmNB2znDZMFPLkFVJ1yNooHQXmRA6qzQ91
+                        LIPs1fvvlEZ6+D7w64VG/cDfYvO7/OkYRQKCAQA5xvo/Mf+DoWh2H/YM/y1FFnGe
+                        2ZBJzJa/8Os/JdY29pplOZefGxd7nePgVaMc4VkFTC0PHnWarQO31H+nroiXOO+N
+                        se3gQDnU1W+99XMmYd+dyCZAa5blQZOykPdhfUNmsqt92QY8T6D5ujRn7zetf0fr
+                        mcTbzoBouu/P8YjSSG0hsFhVpVF2D9xxjQ9uG0DPlKvdxgGeHTnwihsUIsKQxbwL
+                        slkLCN8lFVAn+pr7duNJRBUPK0Txyf0u87jl1iPGew2gSpVWFMNtMfCLeNt69/YX
+                        k2gCibnp5kqtYABYoTt2a/vcdKWmxqlXx9GDIH2ZWXthLQX1ZAUuj5/GNudm
+                        -----END RSA PRIVATE KEY-----
+server:
+  port: 8888

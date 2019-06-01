@@ -3,6 +3,8 @@ package com.drclb.controller;
 
 import com.drclb.dto.Student;
 import com.drclb.settings.StudentData;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -29,7 +32,22 @@ public class StudentDetailsController {
     public ResponseEntity<List<Student>> getStudents() {
         log.debug("Correlation id is " + request.getHeader("X-C-ID"));
         return new ResponseEntity<>(studentData.getList(), HttpStatus.OK);
-
     }
+
+    @GetMapping(path = "/scholarship/list")
+    public ResponseEntity<List<Student>> getStudentsWithScholarship() {
+        return new ResponseEntity<>(callScholarshipService(),HttpStatus.OK);
+    }
+
+    @HystrixCommand(fallbackMethod = "fallBackMech")
+    private List<Student> callScholarshipService(){
+        throw new RuntimeException("Service is down!");
+    }
+
+    private List<Student> fallBackMech(){
+        System.out.println("calling fall back process!!");
+        return Collections.emptyList();
+    }
+
 
 }

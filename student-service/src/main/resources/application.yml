@@ -1,10 +1,15 @@
 others:
-  data:
-    students:
-      list:
-        -
-          name: Ravi
-          rollNumber: 10
-        -
-          name: Bhushan
-          rollNumber: 11
+#  data:
+#    students:
+#      list:
+#        -
+#          name: Ravi
+#          rollNumber: 10
+#        -
+#          name: Bhushan
+#          rollNumber: 11
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
