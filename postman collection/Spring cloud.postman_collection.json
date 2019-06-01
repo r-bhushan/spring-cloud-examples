@@ -1,0 +1,123 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring cloud",
+		"_postman_id": "466dda04-6211-a11b-cebc-4fc472527ec3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Config server",
+			"description": "",
+			"item": [
+				{
+					"name": "check student config for profile \"data\"",
+					"request": {
+						"url": "http://localhost:8888/student-service/data",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student server",
+			"description": "",
+			"item": [
+				{
+					"name": "get students list for scholarship",
+					"request": {
+						"url": "http://localhost:8082/student/scholarship/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh config",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/refresh",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get list of students with pending fee",
+					"request": {
+						"url": "http://localhost:8082/student/pendingFee/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "discovery server",
+			"description": "",
+			"item": [
+				{
+					"name": "Eureka server 1",
+					"request": {
+						"url": "http://localhost:8080",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Eureka server 2",
+					"request": {
+						"url": "http://localhost:8081",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fee collector Server",
+			"description": "",
+			"item": [
+				{
+					"name": "Fee collector using without loadbalanced ",
+					"request": {
+						"url": "http://localhost:8083/collect",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Fee collect-with-loadBalanced",
+					"request": {
+						"url": "http://localhost:8083/collect-with-loadBalanced",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
