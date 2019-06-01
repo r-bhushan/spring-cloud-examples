@@ -1,5 +1,6 @@
 Why use config server
-
+1. Centeralize Configuration for all environments and application
+2. Change config with need to build or re-deploy/restart application
 
 Git Authentication::
 
