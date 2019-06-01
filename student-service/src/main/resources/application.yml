@@ -1,4 +1,7 @@
 others:
+spring:
+  profiles:
+    active: data
 #  data:
 #    students:
 #      list:

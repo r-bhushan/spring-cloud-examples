@@ -4,7 +4,7 @@ spring:
         server:
           git:
 #            uri: https://github.com/r-bhushan/spring-cloud-config
-            uri: https://github.com/r-bhushan/spring-cloud-config
+            uri: https://github.com/r-bhushan/spring-cloud-examples
             ignoreLocalSshSettings: true
 #            hostKey: someHostKey
             searchPaths: central-config
