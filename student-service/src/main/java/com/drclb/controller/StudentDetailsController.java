@@ -35,18 +35,19 @@ public class StudentDetailsController {
     }
 
     @GetMapping(path = "/scholarship/list")
+    @HystrixCommand(fallbackMethod = "fallBackMech")
     public ResponseEntity<List<Student>> getStudentsWithScholarship() {
         return new ResponseEntity<>(callScholarshipService(),HttpStatus.OK);
     }
 
-    @HystrixCommand(fallbackMethod = "fallBackMech")
-    private List<Student> callScholarshipService(){
+
+    public List<Student> callScholarshipService(){
         throw new RuntimeException("Service is down!");
     }
 
-    private List<Student> fallBackMech(){
+    public ResponseEntity<List<Student>> fallBackMech(){
         System.out.println("calling fall back process!!");
-        return Collections.emptyList();
+        return new ResponseEntity<>(Collections.emptyList(), HttpStatus.FAILED_DEPENDENCY);
     }
 
 
