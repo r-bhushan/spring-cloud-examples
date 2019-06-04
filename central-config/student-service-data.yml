@@ -10,7 +10,7 @@ others:
           name: Bhushan
           rollNumber: 11
         -
-          name: New Name test (fetched from central config - data profile)
+          name: New Name test (test1)
           rollNumber: 12
 management:
   endpoints:
