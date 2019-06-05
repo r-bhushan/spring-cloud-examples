@@ -10,7 +10,7 @@ others:
           name: Bhushan
           rollNumber: 11
         -
-          name: New Name test (test1)
+          name: New Name test (demo)
           rollNumber: 12
 management:
   endpoints:
