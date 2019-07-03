@@ -12,6 +12,9 @@ others:
         -
           name: New Name test (demo)
           rollNumber: 12
+        -
+          name: '{cypher}61143c5bf20b6ce0e315327b0232e405cbae4d9c50c79945c1cae7bd225ec0043405c3d12813297b047f37b97829b182'
+          rollNumber: 13
 management:
   endpoints:
     web:
