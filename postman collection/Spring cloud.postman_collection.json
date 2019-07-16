@@ -17,7 +17,38 @@
 						"url": "http://localhost:8888/student-service/data",
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": "40d513b5e1c09c389042f6bae86dc87421fc53960de1e07abb7e5af809ac9761bdf56160a538ab9979760cd05d6b6ce0"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "encrypt",
+					"request": {
+						"url": "http://localhost:8888/encrypt",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "James Bond 007"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "decrypt",
+					"request": {
+						"url": "http://localhost:8888/decrypt",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "0b8d1a046393b89673a38449a8e84dd93e96dfd9837c6280b43b85950bd02938"
+						},
 						"description": ""
 					},
 					"response": []
@@ -32,6 +63,17 @@
 					"name": "get students list for scholarship",
 					"request": {
 						"url": "http://localhost:8082/student/scholarship/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "hystrix stream",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/hystrix.stream",
 						"method": "GET",
 						"header": [],
 						"body": {},
@@ -111,6 +153,192 @@
 					"request": {
 						"url": "http://localhost:8083/collect-with-loadBalanced",
 						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "open fiegn",
+					"request": {
+						"url": "http://localhost:8083/collect-with-feign-client",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hystrix dashboard",
+			"description": "",
+			"item": [
+				{
+					"name": "dashboard",
+					"request": {
+						"url": "http://localhost:8091/hystrix/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "turbine",
+			"description": "",
+			"item": [
+				{
+					"name": "turbine for student cluster",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8086/turbine.stream?cluster=STUDENT-SERVICE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"turbine.stream"
+							],
+							"query": [
+								{
+									"key": "cluster",
+									"value": "STUDENT-SERVICE",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "zuul",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/student-service/student/pendingFee/list",
+					"request": {
+						"url": "http://localhost:8084/student-service/student/pendingFee/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Zuul list of  routes",
+					"request": {
+						"url": "http://localhost:8084/actuator/routes",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "manual route declare",
+					"request": {
+						"url": "http://localhost:8084/api/user/std/v1/student/pendingFee/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"description": "",
+			"item": [
+				{
+					"name": "actuator",
+					"request": {
+						"url": "http://localhost:8082/student/actuator",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "shutdown",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/shutdown",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "beans",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/beans",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "env",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/env",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "threaddump",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/threaddump",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "metrics - jvm.gc.memory.allocated",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/metrics/jvm.gc.memory.allocated",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "httptrace",
+					"request": {
+						"url": "http://localhost:8082/student/actuator/httptrace",
+						"method": "GET",
 						"header": [],
 						"body": {},
 						"description": ""
