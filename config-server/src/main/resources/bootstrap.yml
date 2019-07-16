@@ -1,2 +1,15 @@
 encrypt:
   key: ravi@test@trainnning##$$
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          #          uri: https://github.com/r-bhushan/spring-cloud-config
+          uri: git@github.com:r-bhushan/spring-cloud-examples.git
+          ignoreLocalSshSettings: true
+          searchPaths: central-config
+          privateKey: |
+            {PRIVATE_KEY}
+server:
+  port: 8888

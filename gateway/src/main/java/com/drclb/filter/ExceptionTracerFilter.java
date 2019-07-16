@@ -24,10 +24,12 @@ import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 
 /**
  * This filter override {@link org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter}
  */
+@Component
 public class ExceptionTracerFilter extends ZuulFilter {
     @Override
     public String filterType() {

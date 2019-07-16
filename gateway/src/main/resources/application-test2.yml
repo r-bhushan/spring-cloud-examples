@@ -4,6 +4,7 @@
 
 zuul:
   routes:
-    users:
-      path: /student-zuul-server/**
-      serviceId: student-service
+    demo1:
+      path: /fee/v1/**
+      serviceId: FEE-COLLECTOR-SERVICE
+  ignored-services: '*'

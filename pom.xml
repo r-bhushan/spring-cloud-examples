@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~  This program illustrate the java 8 features for training purpose
+  ~      Copyright (c) 2019. Ravi Bhushan (ravi-bhushan@hotmail.com)
+  ~
+  ~     This program is free software: you can redistribute it and/or modify
+  ~      it under the terms of the GNU General Public License as published by
+  ~      the Free Software Foundation, either version 3 of the License, or
+  ~      (at your option) any later version.
+  ~
+  ~      This program is distributed in the hope that it will be useful,
+  ~      but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~      GNU General Public License for more details.
+  ~
+  ~      You should have received a copy of the GNU General Public License
+  ~      along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.drclb</groupId>
+    <artifactId>spring-cloud-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+ <modules>
+     <module>config-server</module>
+     <module>discover-server</module>
+     <module>fee-collector-service</module>
+     <module>gateway</module>
+     <module>hystrixdashboard</module>
+     <module>student-service</module>
+     <module>turbine-dashboard</module>
+ </modules>
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </dependency>
+</dependencies>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+</project>
