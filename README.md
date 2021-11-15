@@ -5,10 +5,16 @@
 
 # Application Port details 
 Config Server: 8888
-Discovery Server: 8080; 8081
-Gateway: 8084; 8090
-Student Service: 8082, 8093
-Fee Service: 8083
-Hystrix: 8091
-Turbine: 8086
+
+**Discovery Server:** 8080; 8081
+
+**Gateway:** 8084; 8090 
+
+**Student Service:** 8082, 8093
+
+**Fee Service:** 8083
+
+**Hystrix:** 8091
+
+**Turbine:** 8086
 
